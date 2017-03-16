@@ -1,9 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int binaran[32];
-
-void ubinarno(float number) {
+void ubinarno(float number, int binaran[]) {
 	float a = number, decimalno;
 	int i = 1, b_Cijeli = 0, b_Decimalnih = 1;
 	int broj = 0, eksponent = 0;
@@ -95,7 +93,7 @@ void ubinarno(float number) {
 }
 
 int main() {
-	
+	int binaran[32];
 	float number;
 	char string[20];
 	int exit = 1;
@@ -121,7 +119,7 @@ int main() {
 			}
 		}
 		else {
-			ubinarno(number);
+			ubinarno(number, binaran);
 		}
 
 		printf("\n\n Broj %f pretvoren u IEEE 754 standard = ", number);
